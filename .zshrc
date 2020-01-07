@@ -108,3 +108,4 @@ export LIBVA_DRIVER_NAME="iHD"
 export EDITOR="vim"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias cdp="cd ~/projects"
