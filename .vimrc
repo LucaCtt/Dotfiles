@@ -98,4 +98,24 @@ set wrap
 set foldenable
 set foldmethod=marker
 
+" Show line number
+set number
+
+" Show relative line number
+set relativenumber
+
+" }}}
+
+" Remaps {{{
+
+" Disable arrow keys
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
 " }}}
