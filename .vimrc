@@ -36,13 +36,13 @@ set smartcase
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 
 " No annoying sound on errors
 set noerrorbells
@@ -55,7 +55,7 @@ set tm=500
 "Colors and Fonts {{{
 
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -67,6 +67,8 @@ set ffs=unix,dos,mac
 if $COLORTERM == 'truecolor'
     set t_Co=256
 endif
+
+set termguicolors
 
 " }}}
 
@@ -86,13 +88,13 @@ set lbr
 set tw=500
 
 " Auto indent
-set ai 
+set ai
 
 " Smart indent
-set si 
+set si
 
 " Wrap lines
-set wrap 
+set wrap
 
 " Enable folding
 set foldenable
@@ -117,5 +119,28 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+
+" }}}
+
+" vim-plug {{{
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
+let g:airline_powerline_fonts = 1
+let g:airline_section_z = '%3l/%L'
+colorscheme gruvbox
+set background=dark
 
 " }}}
