@@ -113,3 +113,4 @@ export MYVIMRC="~/.vimrc"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias cdp="cd ~/projects"
+alias grep="grep -i"
