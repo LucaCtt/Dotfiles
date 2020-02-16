@@ -135,6 +135,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 
@@ -142,5 +143,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_z = '%3l/%L'
 colorscheme gruvbox
 set background=dark
+
+au BufWrite * :Autoformat
 
 " }}}
