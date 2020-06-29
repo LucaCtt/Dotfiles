@@ -104,12 +104,12 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode nodeenv vcs)
 
-export PATH="$PATH:/home/potato/.local/bin:/home/potato/.yarn/bin"
 export LIBVA_DRIVER_NAME="iHD"
 export EDITOR="vim"
 export KEYTIMEOUT=1
 export MYVIMRC="~/.vimrc"
+export ANDROID_SDK="/home/potato/Android/Sdk"
+export PATH="$PATH:$ANDROID_SDK/platform-tools:$HOME/projects/arch"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias cdp="cd ~/projects"
 alias grep="grep -i"
