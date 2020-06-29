@@ -194,11 +194,13 @@
        style="fill:none;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;">
       <eventcontext
          id="pencil"
-         tolerance="4"
+         tolerance="18"
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="0"
-         average_all_sketches="1" />
+         average_all_sketches="1"
+         simplify="0"
+         pressure="0" />
       <eventcontext
          id="pen"
          mode="drag"
@@ -326,7 +328,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -334,17 +336,17 @@
        gradientdrag="1"
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
-       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"
+       use_svg2="1"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:26.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px"
        selcue="1">
       <group
-         id="lineheight"
-         display_unit="0" />
+         display_unit="0"
+         id="lineheight" />
     </eventcontext>
     <eventcontext
        id="nodes"
        selcue="1"
        gradientdrag="1"
-       highlight_color="4278190335"
        pathflash_enabled="1"
        pathflash_unselected="0"
        pathflash_timeout="500"
@@ -359,7 +361,8 @@
        x="0"
        y="0"
        edit_clipping_paths="0"
-       edit_masks="0" />
+       edit_masks="0"
+       highlight_color="4278190335" />
     <eventcontext
        id="tweak"
        selcue="0"
@@ -414,7 +417,7 @@
        id="connector"
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
        selcue="1"
-       curvature="3"
+       curvature="0"
        length="100" />
     <eventcontext
        id="paintbucket"
@@ -424,12 +427,12 @@
        offset="0"
        offsetunits="mm" />
     <group
-       unit="px"
-       id="measure"
-       fontsize="10"
-       precision="2"
+       offset="5"
        scale="100"
-       offset="5" />
+       precision="2"
+       fontsize="10"
+       id="measure"
+       unit="px" />
   </group>
   <group
      id="palette">
@@ -578,7 +581,7 @@
        y="0"
        w="385"
        h="434"
-       visible="1"
+       visible="0"
        state="2"
        placement="1" />
     <group
@@ -598,8 +601,8 @@
        id="spellcheck"
        w="200"
        h="250"
-       lang="en_US"
-       ignorenumbers="1" />
+       ignorenumbers="1"
+       lang="en_US" />
     <group
        id="documentoptions"
        state="1"
@@ -633,10 +636,10 @@
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
-       path=""
+       path="/home/potato/Downloads"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -647,12 +650,13 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/potato/projects/studioemi/src/data/assets/" />
+       path="/home/potato/Downloads/" />
     <group
        id="import"
        enable_preview="1"
        path=""
        ask="1"
+       ask_svg="1"
        link="link"
        scale="optimizeSpeed" />
     <group
@@ -706,10 +710,10 @@
     <group
        id="undo-history" />
     <group
-       id="transparency"
-       on-focus="1.0"
+       animate-time="100"
        on-blur="0.50"
-       animate-time="100" />
+       on-focus="1.0"
+       id="transparency" />
   </group>
   <group
      id="printing">
@@ -851,8 +855,8 @@
        id="dialogsskiptaskbar"
        value="1" />
     <group
-       id="defaultwindowsize"
-       value="2" />
+       value="2"
+       id="defaultwindowsize" />
     <group
        id="arenatilescachesize"
        value="8192" />
@@ -910,14 +914,14 @@
        id="outlinemode"
        value="0" />
     <group
-       id="ocalurl"
-       str="openclipart.org" />
+       str="openclipart.org"
+       id="ocalurl" />
     <group
-       id="ocalusername"
-       str="" />
+       str=""
+       id="ocalusername" />
     <group
-       id="ocalpassword"
-       str="" />
+       str=""
+       id="ocalpassword" />
     <group
        id="wireframecolors"
        onlight="255"
@@ -973,10 +977,10 @@
          origin_y="0.0"
          spacing_x="1.0"
          spacing_y="1.0"
-         color="1061158688"
-         empcolor="1061158720"
          empspacing="5"
-         dotted="0" />
+         dotted="0"
+         color="1061158688"
+         empcolor="1061158720" />
       <group
          id="axonom"
          units="mm"
@@ -985,9 +989,9 @@
          spacing_y="1.0"
          angle_x="30.0"
          angle_z="30.0"
+         empspacing="5"
          color="1061158688"
-         empcolor="1061158720"
-         empspacing="5" />
+         empcolor="1061158720" />
     </group>
     <group
        id="workarounds"
@@ -995,12 +999,21 @@
        partialdynamic="0" />
     <group
        id="rendering" />
+    <group
+       id="svgeditor"
+       value="inkscape" />
+    <group
+       id="dash"
+       scale="1" />
   </group>
   <group
-     id="extensions" />
+     id="extensions"
+     org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
+     org.inkscape.output.pdf.cairorenderer.resolution="96"
+     org.inkscape.output.pdf.cairorenderer.bleed="0" />
   <group
      id="desktop"
-     style="line-height:1.25;fill:#00fd26;fill-opacity:1">
+     style="line-height:1.25;fill:#00fd26;fill-opacity:1;font-size:26.66666667px">
     <group
        width="640"
        height="480"
@@ -1105,4 +1118,13 @@
   <group
      id="ui"
      language="" />
+  <group
+     id="theme"
+     defaultTheme="Adwaita"
+     defaultIconTheme="Papirus"
+     gtkTheme="Adwaita"
+     iconTheme="Papirus"
+     menuIcons_canvas="0"
+     menuIcons_layers="0"
+     menuIcons_objects="0" />
 </inkscape>
