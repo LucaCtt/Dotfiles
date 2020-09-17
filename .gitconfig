@@ -2,7 +2,7 @@
 	email = lucacotti@outlook.com
 	name = Luca Cotti
 [credential]
-	helper = /usr/share/git/credential/libsecret/git-credential-libsecret
+	helper = store
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
