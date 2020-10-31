@@ -104,12 +104,15 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode nodeenv vcs)
 
-export LIBVA_DRIVER_NAME="iHD"
+export LIBVA_DRIVER_NAME="i965"
 export EDITOR="vim"
 export KEYTIMEOUT=1
 export MYVIMRC="~/.vimrc"
 export ANDROID_SDK="/home/potato/Android/Sdk"
-export PATH="$PATH:$ANDROID_SDK/platform-tools:$HOME/projects/arch"
+export PATH="$PATH:$HOME/.local/bin:$ANDROID_SDK/platform-tools:$HOME/go/bin"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="grep -i"
+alias enable_bc="echo 1 >/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+
+eval $(thefuck --alias)
