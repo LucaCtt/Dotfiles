@@ -109,11 +109,9 @@ export EDITOR="vim"
 export KEYTIMEOUT=1
 export MYVIMRC="~/.vimrc"
 export ANDROID_SDK="/home/potato/Android/Sdk"
-export PATH="$PATH:$HOME/.local/bin:$ANDROID_SDK/platform-tools:$HOME/go/bin"
-
+export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="grep -i"
-alias enable_bc="sudo echo 1 >/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
 
 eval $(thefuck --alias)
