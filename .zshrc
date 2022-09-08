@@ -108,10 +108,10 @@ export LIBVA_DRIVER_NAME="i965"
 export EDITOR="vim"
 export KEYTIMEOUT=1
 export MYVIMRC="~/.vimrc"
-export ANDROID_SDK="/home/potato/Android/Sdk"
-export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/.config/composer/vendor/bin"
 
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="grep -i"
 
 eval $(thefuck --alias)
+
